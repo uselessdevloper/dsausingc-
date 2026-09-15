@@ -7,7 +7,7 @@ int main(){
     cout<<"Enter your name";
     cin>>name;
     for(int i=0;i<name.size();i++){
-        cout<<name<<endl;
+        cout<<name<<"hii"<<endl;
     }
     return 0;
 
