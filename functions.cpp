@@ -15,7 +15,7 @@ void printName(string name){
 }
 //here if we use &s then the changes made in the 
 //function will be reflected in the main function as well 
-// this is called pass by reference
+// this is called pass by reference just use & before the variable name in the function parameter
 void doSomething(string &s){
     s[0]='R';
     cout<<s<<endl;
