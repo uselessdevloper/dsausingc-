@@ -85,15 +85,52 @@ void explainVector(){
     for(auto it=a.begin();it!=a.end();it++){
         cout<<*(it)<<" ";
     }
+    cout<<endl;
     //using for each loop to traverse the vector
     for(auto it:a){
         cout<<it<<" ";
     }
+    //delete all the elements of the vector using erase() function
+    a.erase(a.begin()+1);
+    cout<<endl<<"The elements of the vector after erase() are: ";
+    for(auto it:a){
+        cout<<it<<" "; 
+    }
+    //deleting all the elements of the vector using clear() function
+    a.clear();
+    cout<<endl<<"The size of the vector after clear() is: "<<a.size()<<endl;
+
+    //erase function can also be used to delete a range of elements from the vector. For example, to delete the first two elements of the vector, we can use the following code:
+    vector<int> b={1,2,3,4,5};
+    b.erase(b.begin(),b.begin()+2);
+    cout<<"The elements of the vector after erasing the first two elements are: ";
+    for(auto it:b){
+        cout<<it<<" ";// 3 4 5
+    }
+    cout<<endl;
+    //insert function can be used to insert an element at a specific position in the vector. For example, to insert the element 10 at the second position of the vector, we can use the following code:
+    vector<int> c={1,2,3,4,5};
+    c.insert(c.begin()+1,10);
+    cout<<"The elements of the vector after inserting 10 at the second position are: ";
+    for(auto it:c){
+        cout<<it<<" ";// 1 10 2 3 4 5
+    }
+    // inserting 2 elements at the second position of the vector using insert() function
+    c.insert(c.begin()+1,2,20);
+    //insert a vector at the second position of the vector using insert() function
+    vector<int> d={30,40,50};
+    c.insert(c.begin()+1,d.begin(),d.end());
+    cout<<endl<<"The elements of the vector after inserting 2 elements at the second position are: ";
+    for(auto it:c){
+        cout<<it<<" ";// 1 30 40 50 10 20
+    }
+    //v.size() function returns the number of elements in the vector. It is a constant time operation.
+    //v.pop_back() function removes the last element of the vector. It is a constant time operation.
+    //v.swap() function swaps the contents of two vectors. It is a constant time operation.
+    //v.clear(); removes all the elements of the vector. It is a linear time operation.
+    //v.empty() function returns true if the vector is empty, otherwise it returns false. It is a constant time operation.
     
 
-
-
- 
 }
 
 int main(){
