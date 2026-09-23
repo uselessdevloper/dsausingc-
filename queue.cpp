@@ -11,8 +11,13 @@ void explainDeque(){
 
     dq.pop_back();
     dq.back();
+    //front() fucntion points to the front of the queue 
     dq.front();
 
+
+}
+void explainQueue(){
+    queue<int> q;
 
 }
 int main(){
